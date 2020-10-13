@@ -1,8 +1,4 @@
-export default ({
-  $axios,
-  store,
-  redirect
-}) => {
+export default ({ $axios, store, redirect }) => {
   $axios.onError(error => {
     if (error.response && error.response.status === 500) {
       redirect('/login')
@@ -21,7 +17,7 @@ export default ({
   $axios.interceptors.response.use(
     response => {
       if (response.status === 200) {
-        console.log('intercepter intercepter', store, response)
+        console.log('intercepter intercepter', store.state)
       }
       return response
     }, error => {

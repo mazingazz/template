@@ -2,15 +2,13 @@
   {
     "name": "login",
     "path": "/login",
-    "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/login.vue",
-    "chunkName": "pages/login",
-    "_name": "_0c40084f"
+    "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\login.vue",
+    "chunkName": "pages/login"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_42986538"
+    "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
   }
 ]

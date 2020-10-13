@@ -16,6 +16,9 @@
     <p>
       <button @click="pluginTest">plugin test</button>
     </p>
+    <nuxt-link to="/login"
+      >About (internal link that belongs to the Nuxt App)</nuxt-link
+    >
   </section>
 </template>
 <script>

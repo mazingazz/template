@@ -54,10 +54,12 @@ module.exports = {
     '~/plugins/hello.js',
     '~/plugins/testPlugin.js'
   ],
-  
   axios: {
     // 모듈 설정
     baseURL: process.env.BASE_URL || 'localhost'
+  },
+  router: {
+    middleware: "check-before-move"
   }
 }
 
