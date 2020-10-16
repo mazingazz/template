@@ -1,7 +1,8 @@
 import Vue from 'Vue'
 
-export default ({ app }, inject) => {
-  app.store.state.test = 1
+export default ({ app, store }, inject) => {
+  let wrap = null
+  store.state.test = 1
   let component = null
   class inst {
     constructor() { }
@@ -13,16 +14,15 @@ export default ({ app }, inject) => {
       }
     });
 
-    const app = document.querySelector(".test");
+    wrap = document.querySelector(".test");
 
     // Mounting on a empty div created programatically
     component.$mount(document.createElement("div"));
-    app.appendChild(component.$el);
+    wrap.appendChild(component.$el);
   }
   inst.prototype.hide = function () {
-    var app = document.querySelector('.test')
     component.$destroy();
-    app.removeChild(component.$el);
+    wrap.removeChild(component.$el);
   }
 
   var test = new inst()

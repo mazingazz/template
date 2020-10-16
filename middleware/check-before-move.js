@@ -1,5 +1,4 @@
 export default ({ store, redirect }) => {
-  console.log("route store", store.state);
 
   store.app.router.beforeEach((to, from, next) => {
     // console.log('route store to from next', to, from, next)

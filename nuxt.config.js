@@ -48,11 +48,13 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/device'
   ],
   plugins: [
     '~/plugins/axios',
     '~/plugins/hello.js',
-    '~/plugins/testPlugin.js'
+    '~/plugins/testPlugin.js',
+    '~/plugins/global-components.js'
   ],
   axios: {
     // 모듈 설정

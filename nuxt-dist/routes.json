@@ -1,9 +1,40 @@
 [
   {
+    "path": "/children",
+    "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\children.vue",
+    "chunkName": "pages/children",
+    "children": [
+      {
+        "name": "children",
+        "path": "",
+        "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\children\\\\index.vue",
+        "chunkName": "pages/children/index"
+      },
+      {
+        "name": "children-id",
+        "path": ":id",
+        "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\children\\\\_id.vue",
+        "chunkName": "pages/children/_id"
+      }
+    ]
+  },
+  {
     "name": "login",
     "path": "/login",
     "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\login.vue",
     "chunkName": "pages/login"
+  },
+  {
+    "name": "sortable",
+    "path": "/sortable",
+    "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\sortable.vue",
+    "chunkName": "pages/sortable"
+  },
+  {
+    "name": "template",
+    "path": "/template",
+    "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\template.vue",
+    "chunkName": "pages/template"
   },
   {
     "name": "index",
