@@ -13,7 +13,9 @@ export default {
   components: {
     MyAlert: () => import('@/components/MyAlert')
   },
-  asyncData() {    
+  asyncData({ $config: { baseURL } }) {
+    // console.log('async', $config)
+    fetch(`${baseURL}/test`)
   },
   created() {
     console.log('device', this.$device)

@@ -1,20 +1,27 @@
 <template>
   <div>
     <div>My blog navigation bar here</div>
-    <test-me/>
-    <nuxt/>
+    <test-me />
+    <nuxt />
   </div>
 </template>
 <script>
 export default {
-  asyncData ({ $config: { baseURL } }) {
-    console.log('server', process, $config)
+  asyncData({ $config: { baseURL } }) {
+    console.log("server", $config);
+  },
+  create() {
   },
   mounted() {
-    this.$config.test = {}
-    this.$config.test.dev = '1111'
-    console.log(this.$config)
-  }
-}
+    window.test = {}
+    test.depth = {}
+    test.depth.inner = function (param) {
+      console.log('inner called', param)
+    }
+    this.$interfaceApp.set()
+    const infParam = {namespace:'test.depth.inner', data:{}}
+    this.$interfaceApp.call(infParam)
+  },
+};
 </script>
 

@@ -8,38 +8,45 @@
         "name": "children",
         "path": "",
         "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\children\\\\index.vue",
-        "chunkName": "pages/children/index"
+        "chunkName": "pages/children/index",
+        "_name": "_513df786"
       },
       {
         "name": "children-id",
         "path": ":id",
         "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\children\\\\_id.vue",
-        "chunkName": "pages/children/_id"
+        "chunkName": "pages/children/_id",
+        "_name": "_14d0236e"
       }
-    ]
+    ],
+    "_name": "_6f280d08"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\login.vue",
-    "chunkName": "pages/login"
+    "chunkName": "pages/login",
+    "_name": "_77ea273c"
   },
   {
     "name": "sortable",
     "path": "/sortable",
     "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\sortable.vue",
-    "chunkName": "pages/sortable"
+    "chunkName": "pages/sortable",
+    "_name": "_13eb82f5"
   },
   {
     "name": "template",
     "path": "/template",
     "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\template.vue",
-    "chunkName": "pages/template"
+    "chunkName": "pages/template",
+    "_name": "_f8ca9b12"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_a37af7b6"
   }
 ]

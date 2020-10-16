@@ -150,7 +150,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: '/',
-      env: {"dev":"devdevdevelopment","server":"developement apiserver"}
+      env: {"baseUrl":"https://ireporter-endpoint.herokuapp.com/api/v2/"}
     }
     // Only set once
     if (!process.static && context.req) {

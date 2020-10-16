@@ -1,11 +1,6 @@
-const config = {
-  test: process.env.NODE_ENV !== 'production' ? 'devdevdevelopment' : 'proproproduction',
-  apiserver: process.env.NODE_ENV !== 'production' ? 'developement apiserver' : 'production vbvbvbvbv apiserver',
-}
 module.exports = {
   env: {
-    dev:config.test,
-    server:config.apiserver
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   },
   buildDir: 'nuxt-dist',
   // dir: 'my-site', // dist
@@ -54,7 +49,9 @@ module.exports = {
     '~/plugins/axios',
     '~/plugins/hello.js',
     '~/plugins/testPlugin.js',
-    '~/plugins/global-components.js'
+    '~/plugins/interface-app.js',
+    '~/plugins/global-components.js',
+    '~/plugins/util.js'
   ],
   axios: {
     // 모듈 설정
