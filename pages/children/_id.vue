@@ -9,9 +9,9 @@ export default {
   mounted() {
     console.log('mounted', this.$route.params)
   },
-  validate ({ params }) {
-    return !isNaN(+params.id)
+  validate({params}) { return /^\d+$/.test(params.id); 
   },
+  // asyncData({params, query}) { console.log( query ); return { id: params.id , hello: query.hello }; },
   asyncData ({ params, env, error }) {
     const user = {id:0, name:'00'}
 

@@ -18,6 +18,7 @@
     </p>
     <nuxt-link to="/login">login</nuxt-link>
     <nuxt-link to="/children">children</nuxt-link>
+    <nuxt-link :to="`/${dynaurl}/sub-category/20`">dyna</nuxt-link>
   </section>
 </template>
 <script>
@@ -30,7 +31,8 @@ export default {
   },
   beforeMount() {},
   data: function() {
-    return { 
+    return {
+      dynaurl: 10, 
       flag: true,
       greeting: "hellos",
       todoTitle: "" };
