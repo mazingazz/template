@@ -12,16 +12,7 @@ export default {
   },
   create() {
   },
-  mounted() {
-    window.test = {}
-    test.depth = {}
-    test.depth.inner = function (param) {
-      console.log('inner called', param)
-    }
-    this.$interfaceApp.set()
-    const infParam = {namespace:'test.depth.inner', data:{}}
-    this.$interfaceApp.call(infParam)
-  },
+  mounted() {},
 };
 </script>
 

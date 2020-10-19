@@ -1,89 +1,89 @@
 [
   {
     "path": "/children",
-    "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/children.vue",
+    "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\children.vue",
     "chunkName": "pages/children",
     "children": [
       {
         "name": "children",
         "path": "",
-        "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/children/index.vue",
+        "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\children\\\\index.vue",
         "chunkName": "pages/children/index",
-        "_name": "_5849174c"
+        "_name": "_513df786"
       },
       {
         "name": "children-id",
         "path": ":id",
-        "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/children/_id.vue",
+        "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\children\\\\_id.vue",
         "chunkName": "pages/children/_id",
-        "_name": "_598c7cb4"
+        "_name": "_14d0236e"
       }
     ],
-    "_name": "_8371c8ee"
+    "_name": "_6f280d08"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/login.vue",
+    "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\login.vue",
     "chunkName": "pages/login",
-    "_name": "_0c40084f"
+    "_name": "_77ea273c"
   },
   {
     "name": "sortable",
     "path": "/sortable",
-    "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/sortable.vue",
+    "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\sortable.vue",
     "chunkName": "pages/sortable",
-    "_name": "_09c6a502"
+    "_name": "_13eb82f5"
   },
   {
     "name": "template",
     "path": "/template",
-    "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/template.vue",
+    "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\template.vue",
     "chunkName": "pages/template",
-    "_name": "_7975d484"
+    "_name": "_f8ca9b12"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/index.vue",
+    "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_42986538"
+    "_name": "_a37af7b6"
   },
   {
     "path": "/:category",
-    "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/_category.vue",
+    "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\_category.vue",
     "chunkName": "pages/_category",
     "children": [
       {
         "name": "category",
         "path": "",
-        "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/_category/index.vue",
+        "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\_category\\\\index.vue",
         "chunkName": "pages/_category/index",
-        "_name": "_6d4642f4"
+        "_name": "_75ba37d2"
       },
       {
         "path": ":sub-category",
-        "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/_category/_sub-category.vue",
+        "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\_category\\\\_sub-category.vue",
         "chunkName": "pages/_category/_sub-category",
         "children": [
           {
             "name": "category-sub-category",
             "path": "",
-            "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/_category/_sub-category/index.vue",
+            "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\_category\\\\_sub-category\\\\index.vue",
             "chunkName": "pages/_category/_sub-category/index",
-            "_name": "_149a8181"
+            "_name": "_36b71e78"
           },
           {
             "name": "category-sub-category-id",
             "path": ":id",
-            "component": "/Volumes/DATA/lab/vue/begin-nuxt/pages/_category/_sub-category/_id.vue",
+            "component": "D:\\\\lab\\\\vue\\\\template\\\\pages\\\\_category\\\\_sub-category\\\\_id.vue",
             "chunkName": "pages/_category/_sub-category/_id",
-            "_name": "_3c2cf029"
+            "_name": "_57ea5ee0"
           }
         ],
-        "_name": "_45ad917e"
+        "_name": "_13f2deca"
       }
     ],
-    "_name": "_5ea75643"
+    "_name": "_cdc392a0"
   }
 ]

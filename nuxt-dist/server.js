@@ -147,7 +147,7 @@ export default async (ssrContext) => {
   /*
   ** Call global middleware (nuxt.config.js)
   */
-  let midd = ["check-before-move"]
+  let midd = ["check-before-move","set-config"]
   midd = midd.map((name) => {
     if (typeof name === 'function') {
       return name

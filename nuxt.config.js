@@ -4,7 +4,7 @@ module.exports = {
   },
   buildDir: 'nuxt-dist',
   // dir: 'my-site', // dist
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -58,7 +58,10 @@ module.exports = {
     baseURL: process.env.BASE_URL || 'localhost'
   },
   router: {
-    middleware: "check-before-move"
+    middleware: [
+      'check-before-move',
+      'set-config'
+    ]
   }
 }
 

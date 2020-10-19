@@ -18,7 +18,6 @@ export default {
     fetch(`${baseURL}/test`)
   },
   created() {
-    console.log('device', this.$device)
   },
   data() {
     return {

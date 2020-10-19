@@ -27,7 +27,23 @@ const { mapState: msT, mapActions: maT } = createNamespacedHelpers("todo");
 
 export default {
   mounted() {
-    // this.greeting = this.$bold("1111");
+    window.HybridApp = {}
+    HybridApp.inner = function (param) {
+      console.log('android inner called', param)
+    }
+
+    window.webkit = {}
+    webkit.messageHandlers = {}
+    webkit.messageHandlers.inner = {}
+    webkit.messageHandlers.inner.postMessage = function (param) {
+      console.log('ios inner called', param)
+    }
+    
+    const infParam = {
+      fn: 'inner',
+      params: '{"callback": "callbackFunc", "data": {}}'
+    }
+    this.$interfaceApp.call(infParam)
   },
   beforeMount() {},
   data: function() {
