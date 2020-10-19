@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div id="app"><div class="test"></div></div>
-    
+    <div>donetodo {{doneTodos}}</div>
     <ul>
       <li v-for="item in todoList" v-bind:key="item.id">
         <input type="checkbox" :checked="item.done" @change="toggle(item)" />
@@ -23,8 +23,7 @@
 </template>
 <script>
 import { createNamespacedHelpers } from "vuex";
-const { mapState: msT, mapActions: maT } = createNamespacedHelpers("todo");
-
+const { mapState: msT, mapActions: maT, mapGetters: mgT } = createNamespacedHelpers("todo");
 export default {
   mounted() {
     window.HybridApp = {}
@@ -55,7 +54,12 @@ export default {
   },
   // this.$store.state.todo.list; }
   computed: {
+    ...mgT(['doneTodos']),
     ...msT({ acc: "counter", todoList: "list" })
+    // ...mgT([
+    //   'doneTodosCount',
+    //   'anotherGetter',
+    // ])
   },
   methods: {
     ...maT(["add"]),

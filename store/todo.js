@@ -28,6 +28,11 @@ const moduleA = {
       // const data = await app.$axios.$get('/posts.json')
       commit('add', data)
     }
+  },
+  getters: {
+    doneTodos: state => {
+      return state.list
+    }
   }
 }
 

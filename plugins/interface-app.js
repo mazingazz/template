@@ -11,8 +11,6 @@ export default ({app}, inject) => {
 
       for (const value of namespaces) context = context[value]
 
-      console.log('context', typeof context, context)
-
       try {
         if (app.$config.device === 'APP_ANDROID') context[func].call(null, data)
         if (app.$config.device === 'APP_IOS') context[func]['postMessage'].call(null, data)
