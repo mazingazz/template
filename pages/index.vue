@@ -22,29 +22,34 @@
   </section>
 </template>
 <script>
-import { createNamespacedHelpers } from "vuex";
-const { mapState: msT, mapActions: maT, mapGetters: mgT } = createNamespacedHelpers("todo");
+import {createNamespacedHelpers} from "vuex";
+const {mapState: msT, mapActions: maT, mapGetters: mgT} = createNamespacedHelpers("todo");
 export default {
   mounted() {
     window.HybridApp = {}
-    HybridApp.inner = function (param) {
-      console.log('android inner called', param)
+    HybridApp.funcName = function (param) {
+      console.log('android funcName called', param)
     }
 
     window.webkit = {}
     webkit.messageHandlers = {}
-    webkit.messageHandlers.inner = {}
-    webkit.messageHandlers.inner.postMessage = function (param) {
-      console.log('ios inner called', param)
+    webkit.messageHandlers.funcName = {}
+    webkit.messageHandlers.funcName.postMessage = function (param) {
+      console.log('ios funcName called', param)
     }
     
+
     const infParam = {
-      fn: 'inner',
-      params: '{"callback": "callbackFunc", "data": {}}'
+      fn: 'funcName',
+      params: '{"callback": "callbackFunc", "data": {"key": "value"}}'
     }
     this.$interfaceApp.call(infParam)
+  
   },
   beforeMount() {},
+  asyncData(context) {
+    console.log('context', process, process.env.baseUrl)
+  },
   data: function() {
     return {
       dynaurl: 10, 
@@ -55,15 +60,20 @@ export default {
   // this.$store.state.todo.list; }
   computed: {
     ...mgT(['doneTodos']),
-    ...msT({ acc: "counter", todoList: "list" })
+    ...msT({ acc: state => state.counter, todoList: "list" }),
     // ...mgT([
     //   'doneTodosCount',
     //   'anotherGetter',
-    // ])
+    // ]),
+    // ...mapState({
+    //   a: state => state.some.nested.module.a,
+    //   b: state => state.some.nested.module.b
+    // }),
   },
   methods: {
     ...maT(["add"]),
     addTodo() {
+      console.log('add call')
       this.add(this.todoTitle);
       this.todoTitle = "";
     },

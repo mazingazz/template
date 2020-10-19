@@ -15,7 +15,7 @@ const moduleA = {
   },
   actions: {
     async add ({ state, commit, rootState }, data) {
-      console.log('state', data, state, rootState)
+      // console.log('state', data, state, rootState)
       let param = {
         headers: {'Authorization': 'JWT '},
         message: 'no',
@@ -24,7 +24,7 @@ const moduleA = {
         },
       }
       let res = await this.$axios.get('/incidents', param)
-      console.log('res', res)
+      // console.log('res', res)
       // const data = await app.$axios.$get('/posts.json')
       commit('add', data)
     }

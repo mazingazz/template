@@ -1,7 +1,10 @@
 module.exports = {
-  env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  server: {
+    port: process.env.PORT || 3001, // default: 3000
   },
+  // env: {
+  //   baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  // },
   buildDir: 'nuxt-dist',
   // dir: 'my-site', // dist
   mode: 'spa',
@@ -55,7 +58,7 @@ module.exports = {
   ],
   axios: {
     // 모듈 설정
-    baseURL: process.env.BASE_URL || 'localhost'
+    baseURL: process.env.BASE_API_URL || 'localhost'
   },
   router: {
     middleware: [

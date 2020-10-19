@@ -1,4 +1,4 @@
-import Vue from 'Vue'
+import Vue from 'vue'
 
 export default ({ app, store }, inject) => {
   let wrap = null

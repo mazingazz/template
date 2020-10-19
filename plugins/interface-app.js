@@ -1,24 +1,25 @@
-export default ({app}, inject) => {
-  let interfaceApp = {
-    call: function(param) {
-      let context = window
-          ,namespaces = null
-          ,func = param.fn
-          ,data = btoa(param.params)
-      
-      if (app.$config.device === 'APP_ANDROID') namespaces = ['window', 'HybridApp']
-      if (app.$config.device === 'APP_IOS') namespaces = ['window', 'webkit', 'messageHandlers']
+export default({app}, inject) => {
+  const config = app.$device,
+        interfaceApp = {
+          call: function(param) {
+            let context = window,
+                namespaces = [],
+                func = param.fn,
+                data = btoa(param.params)
+            
+            if (config.platform === 'APP_ANDROID') namespaces = ['window', 'HybridApp']
+            if (config.platform === 'APP_IOS') namespaces = ['window', 'webkit', 'messageHandlers']
 
-      for (const value of namespaces) context = context[value]
+            for (const value of namespaces) context = context[value]
 
-      try {
-        if (app.$config.device === 'APP_ANDROID') context[func].call(null, data)
-        if (app.$config.device === 'APP_IOS') context[func]['postMessage'].call(null, data)
-      } catch(e) {
-        console.error(e)
-      }
-    }
-  }
+            try {
+              if (config.platform === 'APP_ANDROID') context[func].call(null, data)
+              if (config.platform === 'APP_IOS') context[func]['postMessage'].call(null, data)
+            } catch(error) {
+              console.error('인터페이스 호출 실패', error)
+            }
+          }
+        }
 
   inject('interfaceApp', interfaceApp)
 }
