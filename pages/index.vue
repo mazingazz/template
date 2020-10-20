@@ -23,9 +23,14 @@
 </template>
 <script>
 import {createNamespacedHelpers} from "vuex";
-const {mapState: msT, mapActions: maT, mapGetters: mgT} = createNamespacedHelpers("todo");
+// export const { mapFields: mapAddressFields } = createHelpers({
+//   getterType: 'customer/address/getField',
+//   mutationType: 'customer/address/updateField',
+// });
+const {mapState: msT, mapActions: maT, mapGetters: mgT} = createNamespacedHelpers("todo/moduleA");
 export default {
   mounted() {
+    
     window.HybridApp = {}
     HybridApp.funcName = function (param) {
       console.log('android funcName called', param)

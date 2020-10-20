@@ -13,9 +13,9 @@ export default {
   components: {
     MyAlert: () => import('@/components/MyAlert')
   },
-  asyncData({ $config: { baseURL } }) {
-    // console.log('async', $config)
-    fetch(`${baseURL}/test`)
+  asyncData({ query }) {
+    console.log('login async', query)
+    // fetch(`${baseURL}/test`)
   },
   created() {
   },

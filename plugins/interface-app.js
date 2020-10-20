@@ -1,7 +1,7 @@
 export default({app}, inject) => {
   const config = app.$device,
         interfaceApp = {
-          callIF: function(param) {
+          callIF(param) {
             let context = window,
                 namespaces = [],
                 func = param.fn,

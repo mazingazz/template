@@ -1,10 +1,10 @@
 module.exports = {
-  server: {
-    port: process.env.PORT || 3001, // default: 3000
-  },
-  // env: {
-  //   baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  // server: {
+  //   port: process.env.PORT || 3001, // default: 3000
   // },
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  },
   buildDir: 'nuxt-dist',
   // dir: 'my-site', // dist
   mode: 'spa',
