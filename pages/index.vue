@@ -38,7 +38,7 @@ export default {
       console.log('ios funcName called', param)
     }
     
-
+    // interface parameter
     const intfObj = {
       fn: 'funcName',
       params: '{"callback": "callbackFunc", "data": {"key": "value"}}'
