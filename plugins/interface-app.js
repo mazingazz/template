@@ -1,7 +1,7 @@
 export default({app}, inject) => {
   const config = app.$device,
         interfaceApp = {
-          call: function(param) {
+          callIF: function(param) {
             let context = window,
                 namespaces = [],
                 func = param.fn,
@@ -13,10 +13,10 @@ export default({app}, inject) => {
             for (const value of namespaces) context = context[value]
 
             try {
-              if (config.platform === 'APP_ANDROID') context[func].call(null, data)
-              if (config.platform === 'APP_IOS') context[func]['postMessage'].call(null, data)
+              if (config.platform === 'APP_ANDROID') context[func](data)
+              if (config.platform === 'APP_IOS') context[func]['postMessage'](data)
             } catch(error) {
-              console.error('인터페이스 호출 실패', error)
+              alert('인터페이스 호출 실패', error)
             }
           }
         }

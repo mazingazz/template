@@ -39,11 +39,11 @@ export default {
     }
     
 
-    const infParam = {
+    const intfObj = {
       fn: 'funcName',
       params: '{"callback": "callbackFunc", "data": {"key": "value"}}'
     }
-    this.$interfaceApp.call(infParam)
+    this.$interfaceApp.callIF(intfObj)
   
   },
   beforeMount() {},
