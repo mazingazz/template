@@ -1,6 +1,6 @@
 export default({app}, inject) => {
   const config = app.$device,
-        interfaceApp = {
+        withApp = {
           callIF(param) {
             let context = window,
                 namespaces = [],
@@ -19,7 +19,18 @@ export default({app}, inject) => {
               alert('인터페이스 호출 실패', error)
             }
           }
+        },
+        withWeb = {
+          MemberInfo(param) {
+            // let data = JSON.parse(param)
+            app.$config.auth_token = 'abcd1234'
+            app.$axios.setHeader('X-AUTH-TOKEN', app.$config.auth_token)
+          },
+          otherFunction() {
+            
+          }
         }
-
-  inject('interfaceApp', interfaceApp)
+  
+  inject('interfaceApp', withApp)
+  inject('interfaceWeb', withWeb)
 }

@@ -1,4 +1,5 @@
 export default (app) => {
+  // 디바이스 정보 설정
   if (app.$device.platform === undefined) {
     const userAgent = window.navigator.userAgent.toLowerCase()
           ,ios = /iphone|ipod|ipad/.test(userAgent)
@@ -8,8 +9,6 @@ export default (app) => {
     if (ios && !safari) app.$device.platform = 'APP_IOS'
     if (window.HybridApp !== undefined) app.$device.platform = 'APP_ANDROID'
   }
-  
-  if (app.query.brand !== undefined) {
-
-  }
+ 
+  Object.assign(window, app.$interfaceWeb)
 }

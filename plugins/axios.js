@@ -1,4 +1,4 @@
-export default ({$axios, store, redirect}) => {
+export default ({$axios, $config, store, redirect}) => {
   $axios.onError(error => {
     if (error.response && error.response.status === 500) {
       redirect('/login')
@@ -7,6 +7,9 @@ export default ({$axios, store, redirect}) => {
 
   $axios.interceptors.request.use(
     config => {
+    if ($config.auth_token !== undefined && config.headers['X-AUTH-TOKEN'] === undefined) {
+      // config.headers['X-AUTH-TOKEN'] = $config.auth_token;
+    }
     console.log('request', config)
     // Do something before request is sent
     return config;
@@ -18,7 +21,6 @@ export default ({$axios, store, redirect}) => {
   $axios.interceptors.response.use(
     response => {
       if (response.status === 200) {
-        console.log('intercepter intercepter', store.state)
       }
       return response
     }, error => {

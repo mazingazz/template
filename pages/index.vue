@@ -27,7 +27,8 @@ import {createNamespacedHelpers} from "vuex";
 //   getterType: 'customer/address/getField',
 //   mutationType: 'customer/address/updateField',
 // });
-const {mapState: msT, mapActions: maT, mapGetters: mgT} = createNamespacedHelpers("todo/moduleA");
+const {mapState: msT, mapActions: maT, mapGetters: mgT} = createNamespacedHelpers("todo");
+const {mapState: msA, mapActions: maA, mapGetters: mgA} = createNamespacedHelpers("modulea/modules/foo");
 export default {
   mounted() {
     
@@ -49,7 +50,7 @@ export default {
       params: '{"callback": "callbackFunc", "data": {"key": "value"}}'
     }
     this.$interfaceApp.callIF(intfObj)
-  
+    console.log('store', this.$store._modulesNamespaceMap)
   },
   beforeMount() {},
   asyncData(context) {
@@ -77,8 +78,9 @@ export default {
   },
   methods: {
     ...maT(["add"]),
+    ...maA(['someAction']),
     addTodo() {
-      console.log('add call')
+      // this.someAction()
       this.add(this.todoTitle);
       this.todoTitle = "";
     },

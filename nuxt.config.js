@@ -63,7 +63,7 @@ module.exports = {
   router: {
     middleware: [
       'check-before-move',
-      'set-config'
+      'set-default'
     ]
   }
 }
