@@ -21,13 +21,31 @@ export default({app}, inject) => {
           }
         },
         withWeb = {
-          MemberInfo(param) {
-            // let data = JSON.parse(param)
-            app.$config.auth_token = 'abcd1234'
-            app.$axios.setHeader('X-AUTH-TOKEN', app.$config.auth_token)
+          MemberInfo(resData) {
+            const param = '{"data": {"intgmbrno":"1234", "accesstoken":"1234", "refreshtoken":"1234"}, "callback":""}'
+            let data = JSON.parse(resData || param)
+            
+            app.$config.auth = {}
+            app.$config.auth.intgmbrno = data.data.intgmbrno
+            app.$config.auth.accesstoken = data.data.accesstoken
+            app.$config.auth.refreshtoken = data.data.refreshtoken
+
+            // app.store.dispatch('addToken', data.data)
+            let parampass = {
+              message: 'no',
+              params: {
+                page: '2'
+              },
+            }
+            let res = app.$axios.get('/incidents', parampass)
+            
+            if (app.$config.auth.accesstoken !== undefined) {
+              app.$axios.defaults.headers.common["X-AUTH-TOKEN"] = app.$config.auth.accesstoken
+            }
           },
           otherFunction() {
-            
+            console.log('app.$axios', app.$axios.defaults)
+            delete app.$axios.defaults.headers.common["X-AUTH-TOKEN"]
           }
         }
   

@@ -1,5 +1,3 @@
-
-
 const obj = {
   actions: {
     testtest({ commit }) {
