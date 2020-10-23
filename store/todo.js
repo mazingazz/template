@@ -24,10 +24,15 @@ const moduleA = {
           page: '2'
         },
       }
-      let res = await this.$axios.get('/incidents', param)
+      try {
+        const res = await this.$axios.get('/incidents', param)
+        commit('add', data)
+      } catch(error) {
+        console.log('error::::', error)
+      }
       // console.log('res', res)
       // const data = await app.$axios.$get('/posts.json')
-      commit('add', data)
+      
     }
   },
   getters: {

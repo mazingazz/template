@@ -81,6 +81,7 @@ export default {
     ...maA(['someAction']),
     addTodo() {
       // this.someAction()
+      console.log('add', this.$config)
       this.add(this.todoTitle);
       this.todoTitle = "";
     },
