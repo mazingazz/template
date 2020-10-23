@@ -17,12 +17,13 @@ const moduleA = {
   actions: {
     async add ({ state, commit, rootState }, data) {
       // console.log('state', data, state, rootState)
+
       let param = {
         headers: {'Authorization': 'JWT '},
         message: 'no',
         params: {
           page: '2'
-        },
+        }
       }
       try {
         const res = await this.$axios.get('/incidents', param)
