@@ -54,7 +54,7 @@ export default {
   },
   beforeMount() {},
   asyncData(context) {
-    console.log('context', process, process.env.baseUrl)
+    console.log('context', context.$axios.get, context.$injectway)
   },
   data: function() {
     return {

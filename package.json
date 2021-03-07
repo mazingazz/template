@@ -15,6 +15,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/device": "^1.2.7",
+    "bootstrap-vue-treeview": "^1.0.8",
     "nuxt": "^2.0.0",
     "nuxtjs-device": "^0.1.1",
     "vue": "^2.6.12",

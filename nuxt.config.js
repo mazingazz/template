@@ -50,6 +50,7 @@ module.exports = {
   ],
   plugins: [
     '~/plugins/axios',
+    { src: '~/plugins/btreeview', ssr: false },
     '~/plugins/hello.js',
     '~/plugins/testPlugin.js',
     '~/plugins/interface-app.js',
